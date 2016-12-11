@@ -1,0 +1,13 @@
+Given an array of stock prices, each representing a different timestamp
+and ordered by time in ascending order, find the biggest profit
+(or smallest loss) one could make, provided that stock must be bought
+before it can be sold, and no buy/sell operation may occurr within the same
+time slot.
+
+Example:
+
+ [35, 41, 17, 8, 5, 26, 29, 47, 20, 44, 38, 11, 14, 23, 32]
+ Buy at 5 to sell at 47, for total profit of 42
+
+ [11, 47, 8, 20, 5, 35, 17, 23, 26, 29, 41, 32, 38, 14, 44]
+ Buy at 5 to sell at 44, for total profit of 39
