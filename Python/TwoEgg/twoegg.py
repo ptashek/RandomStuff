@@ -1,7 +1,7 @@
 '''
 	Based on: http://datagenetics.com/blog/july22012/index.html
 	Author: Lukasz Szmit
-	License: public domain
+	License: MIT
 '''
 from math import sqrt
 from random import randint
