@@ -1,0 +1,55 @@
+exports[`test renders ok if active 1`] = `
+<div>
+  <div
+    className="Post-Title Post-Title-Active"
+    onClick={[Function]}>
+    title
+  </div>
+  <div
+    className="Post-Body">
+    body
+  </div>
+</div>
+`;
+
+exports[`test renders ok if active 2`] = `
+<div>
+  <div
+    className="Post-Title Post-Title-Active"
+    onClick={[Function]}>
+    title
+  </div>
+  <div
+    className="Post-Body">
+    body
+  </div>
+</div>
+`;
+
+exports[`test renders ok if inactive 1`] = `
+<div>
+  <div
+    className="Post-Title"
+    onClick={[Function]}>
+    title
+  </div>
+  <div
+    className="Post-Body">
+    body
+  </div>
+</div>
+`;
+
+exports[`test renders ok if inactive 2`] = `
+<div>
+  <div
+    className="Post-Title"
+    onClick={[Function]}>
+    title
+  </div>
+  <div
+    className="Post-Body">
+    body
+  </div>
+</div>
+`;

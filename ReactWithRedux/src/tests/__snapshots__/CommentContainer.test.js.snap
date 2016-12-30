@@ -1,0 +1,16 @@
+exports[`test renders ok 1`] = `
+<div>
+  <div
+    className="Comment-Body">
+    body
+  </div>
+  <div
+    className="Comment-Footer">
+    by 
+    name
+     (
+    name@example.org
+    )
+  </div>
+</div>
+`;

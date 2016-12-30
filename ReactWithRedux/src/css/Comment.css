@@ -1,0 +1,30 @@
+.Comment-List {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Comment-List > div.Comment-Container {
+  max-height: 150px;
+  padding: 8px;
+  margin-top: 12px;
+  font-size: 10pt;
+  text-align: justify;
+  background-color: rgba(127, 127, 127, 0.05);
+}
+
+
+.Comment-List > div.Comment-Container:first {
+    margin-top: 0;
+}
+
+.Comment-List > div.Comment-Container > div.Comment-Body {
+  font-size: 10pt;
+  overflow-y: auto;
+}
+
+.Comment-List > div.Comment-Container > div.Comment-Footer {
+  font-size: 8pt;
+  font-weight: 700;
+  text-align: left;
+}

@@ -1,0 +1,16 @@
+exports[`test renders ok 1`] = `
+<div>
+  <div
+    className="Post-Container">
+    <div
+      className="Post-Title Post-Title-Active"
+      onClick={[Function]}>
+      title
+    </div>
+    <div
+      className="Post-Body">
+      body
+    </div>
+  </div>
+</div>
+`;
