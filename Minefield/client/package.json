@@ -1,0 +1,30 @@
+{
+  "name": "ReactReduxStreamerSample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React/Redux sample plugged into a chunked data stream",
+  "devDependencies": {
+    "flow-bin": "^0.37.4",
+    "react-scripts": "^0.8.4",
+    "react-test-renderer": "^15.4.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.20.0",
+    "es6-promise": "^4.0.5",
+    "fetch-readablestream": "^0.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "text-encoding": "^0.6.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "flow": "flow",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "homepage": "http://localhost/cf/build/"
+}

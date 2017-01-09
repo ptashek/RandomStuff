@@ -1,0 +1,37 @@
+exports[`test renders ok 1`] = `
+<div
+  className="App-Content-Main">
+  Currency Pair: 
+  EUR/USD
+  <div>
+    <div
+      className="App-Content-Secondary">
+      Country: 
+      IE
+      <ul>
+        <li>
+          <strong>
+            Transactions:
+          </strong>
+           
+          10
+        </li>
+        <li>
+          <strong>
+            Average rate:
+          </strong>
+           
+          1.5
+        </li>
+        <li>
+          <strong>
+            Average size:
+          </strong>
+           
+          100
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

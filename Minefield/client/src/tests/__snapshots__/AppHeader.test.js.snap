@@ -1,0 +1,98 @@
+exports[`test renders ok with animate=false and many children 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text">
+    <div>
+      one
+    </div>
+    <div>
+      two
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders ok with animate=false and no children 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text" />
+</div>
+`;
+
+exports[`test renders ok with animate=false and one child 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text">
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders ok with animate=true and many children 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo App-Logo-Animated"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text">
+    <div>
+      one
+    </div>
+    <div>
+      two
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders ok with animate=true and no children 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo App-Logo-Animated"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text" />
+</div>
+`;
+
+exports[`test renders ok with animate=true and one child 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo App-Logo-Animated"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text">
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders ok with default props 1`] = `
+<div>
+  <img
+    alt="logo"
+    className="App-Header-Logo App-Logo"
+    src="logo.svg" />
+  <div
+    className="App-Header-Text" />
+</div>
+`;
