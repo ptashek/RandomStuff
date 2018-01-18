@@ -1,8 +1,11 @@
 // @flow
 
-import { createStore, applyMiddleware } from 'redux';
+
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import reduxApp from './Reducers';
+import reducer from './reducer';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export type Post = {
   userId: number,
@@ -28,6 +31,6 @@ export type State = {
 };
 
 export const store = createStore(
-  reduxApp,
-  applyMiddleware(thunk)
+  reducer,
+  composeEnhancers(applyMiddleware(thunk))
 );

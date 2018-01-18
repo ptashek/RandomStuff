@@ -1,6 +1,6 @@
 // @flow
 
-import type { Post, State } from './Store';
+import type { Post, Comment, State } from './store';
 
 export const BUSY: string = 'BUSY';
 
@@ -14,14 +14,10 @@ export const ACTIVE_POST: string = 'ACTIVE_POST';
 
 export type Action = {
   type: string,
-  data?: number | Array<Post | Comment>,
+  data?: number | Array<Post> | Array<Comment>,
 };
 
 export type Dispatch = (action: Action) => void | Function;
-
-function hasComments(state: State): boolean {
-    return state.comments[state.activePost] != undefined;
-}
 
 function fetchPostList(): Function {
   return (dispatch: Dispatch, getState: () => State): Promise<any> => {
@@ -41,7 +37,7 @@ function fetchCommentList(): Function {
 
 export function getPostList(): Function {
   return (dispatch: Dispatch, getState: () => State): ?Function => {
-    if (getState().posts.length == 0) {
+    if (getState().posts.length === 0) {
       return dispatch(fetchPostList());
     }
   }
@@ -56,7 +52,7 @@ export function postListReady(posts: Array<Post>): Action {
 
 export function getCommentList(): Function {
   return (dispatch: Dispatch, getState: () => State): ?Function => {
-    if (getState().activePost != -1) {
+    if (getState().activePost !== -1) {
       return dispatch(fetchCommentList());
     }
   }

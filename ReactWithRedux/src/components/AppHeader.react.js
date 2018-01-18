@@ -1,7 +1,8 @@
 // @flow
 
 /* Module imports */
-import React, { PropTypes, PureComponent, Element } from 'react';
+import React, { PureComponent, Element } from 'react';
+import PropTypes from 'prop-types';
 
 /* Media imports */
 import logo from '../images/logo.svg';
@@ -29,8 +30,8 @@ class AppHeader extends PureComponent {
 };
 
 AppHeader.propTypes = {
+  ...PureComponent.propTypes,
     animate: PropTypes.bool,
-    ...PureComponent
 };
 
 export default AppHeader

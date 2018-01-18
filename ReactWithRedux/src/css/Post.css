@@ -11,20 +11,20 @@
 
 .Post-List > div.Post-Container > div.Post-Title-Active::before {
   content: "\2605";
-  font-size: 11pt;
+  font-size: 12pt;
   margin-right: 8px;
   color: rgb(58, 105, 255);
 }
 
 .Post-List > div.Post-Container > div.Post-Title {
   cursor: pointer;
-  font-size: 11pt;
+  font-size: 12pt;
   font-weight: 700;
   text-align: left;
   text-transform: capitalize;
 }
 
 .Post-List > div.Post-Container > div.Post-Body {
-  font-size: 10pt;
+  font-size: 11pt;
   font-weight: 400;
 }

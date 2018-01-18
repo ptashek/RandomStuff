@@ -1,7 +1,7 @@
 // @flow
 
-import React, { PropTypes, Element, PureComponent } from 'react';
-import type { Post } from '../redux/Store';
+import React, { Element, PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import '../css/Post.css';
 
@@ -26,6 +26,7 @@ class PostContainer extends PureComponent {
 }
 
 PostContainer.propTypes = {
+  ...PureComponent.propTypes,
   post: PropTypes.shape({
     id: PropTypes.number.isRequired,
     userId: PropTypes.number.isRequired,
@@ -34,7 +35,6 @@ PostContainer.propTypes = {
   }).isRequired,
   active: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
-  ...PureComponent
 }
 
 export default PostContainer

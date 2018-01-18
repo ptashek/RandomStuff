@@ -1,7 +1,7 @@
 // @flow
 
-import React, { PropTypes, Element, PureComponent } from 'react';
-import type { Comment } from '../redux/Store';
+import React, { Element, PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import '../css/Comment.css';
 
@@ -20,6 +20,7 @@ class CommentContainer extends PureComponent {
 }
 
 CommentContainer.propTypes = {
+  ...PureComponent.propTypes,
   comment: PropTypes.shape({
     id: PropTypes.number.isRequired,
     postId: PropTypes.number.isRequired,
@@ -27,7 +28,6 @@ CommentContainer.propTypes = {
     email: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired
   }).isRequired,
-  ...PureComponent
 }
 
 export default CommentContainer

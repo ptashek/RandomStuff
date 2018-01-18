@@ -2,16 +2,16 @@
 
 /* Module imports */
 import React, { Component, Element } from 'react';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import  * as actionCreators from '../redux/actions';
+import type { Dispatch } from '../redux/actions';
+import type { Post } from '../redux/store';
+
 import AppHeader from './AppHeader.react';
 import PostListContainer from './PostListContainer.react';
 import CommentListContainer from './CommentListContainer.react';
-
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import  * as actionCreators from '../redux/Actions';
-
-import type { Dispatch } from '../redux/Actions';
-import type { Post, State } from '../redux/Store';
 
 import '../css/App.css';
 import '../css/Post.css';
@@ -19,17 +19,19 @@ import '../css/Post.css';
 class App extends Component {
 
   props: {
-    state: State,
-    store: Object,
     actions: Object,
+    activePost: number,
+    busy: Boolean,
+    comments: Object,
+    posts: Array<Post>,
   };
 
   onPostClick = (e: SyntheticEvent, id: number): void => {
     e.preventDefault();
-    if (this.props.state.activePost !== id) {
-      const { setActivePost, getCommentList } = this.props.actions;
-      setActivePost(id);
-      getCommentList();
+    const { activePost, actions } = this.props;
+    if (activePost !== id) {
+      actions.setActivePost(id);
+      actions.getCommentList();
     }
   };
 
@@ -39,7 +41,7 @@ class App extends Component {
   }
 
   render(): Element<any> {
-    const { state } = this.props;
+    const { posts, comments, activePost } = this.props;
     return (
       <div className="App">
         <AppHeader className="App-Header" animate={true}>
@@ -53,13 +55,13 @@ class App extends Component {
         <div className="App-Content-Container">
           <PostListContainer
             className="App-Content-Main Post-List"
-            posts={state.posts}
-            activePost={state.activePost}
+            posts={posts}
+            activePost={activePost}
             onPostClick={this.onPostClick}
           />
           <CommentListContainer
             className="App-Content-Secondary Comment-List"
-            comments={state.comments[state.activePost]}
+            comments={comments[activePost]}
           />
         </div>
       </div>
@@ -67,13 +69,18 @@ class App extends Component {
   }
 }
 
-function mapStateToProps(state: State): Object {
-  return { state: state };
+App.propTypes = {
+  actions: PropTypes.object.isRequired,
+  activePost: PropTypes.number.isRequired,
+  busy: PropTypes.bool.isRequired,
+  // TODO: define shapes for comments and posts
+  posts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  comments: PropTypes.object.isRequired,
 }
 
 function mapDispatchToProps(dispatch: Dispatch): Object {
   const actions = bindActionCreators({ ...actionCreators }, dispatch);
-  return { actions: actions };
+  return { actions };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(state => state, mapDispatchToProps)(App)

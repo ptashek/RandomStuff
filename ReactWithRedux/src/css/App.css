@@ -45,7 +45,7 @@
   color: #000;
   display: flex;
   flex-direction: row;
-  font-size: 12pt;
+  font-size: 14pt;
   margin: 0;
   padding: 0;
 }
@@ -59,7 +59,7 @@
 }
 
 .App-Content-Secondary {
-  flex-basis: 240px;
+  flex-basis: 480px;
   flex-grow: 0;
   flex-shrink: 1;
   order: 2;

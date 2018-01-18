@@ -1,9 +1,8 @@
 // @flow
 
-// import { List, Map } from 'immutable';
-import type { Action } from './Actions';
-import { BUSY, ACTIVE_POST, POST_LIST_SUCCESS, COMMENT_LIST_SUCCESS } from './Actions';
-import type { Comment, State } from './Store';
+import type { Action } from './actions';
+import { ACTIVE_POST, POST_LIST_SUCCESS, COMMENT_LIST_SUCCESS } from './actions';
+import type { State } from './store';
 
 export const initialState: State = {
   activePost: -1,
@@ -12,7 +11,10 @@ export const initialState: State = {
   busy: false,
 };
 
-function reduxApp(state: State = initialState, action: Action): State {
+export default function reducer(
+  state: State = initialState,
+  action: Action
+): State {
   switch (action.type) {
     case POST_LIST_SUCCESS:
       return { ...state, posts: action.data };
@@ -23,7 +25,7 @@ function reduxApp(state: State = initialState, action: Action): State {
       }
       const comments = Object.assign({}, state.comments);
       comments[state.activePost] = action.data;
-      return { ...state, comments: comments };
+      return { ...state, comments };
 
     case ACTIVE_POST:
       // $FlowFixMe - trust the action code to send correct data
@@ -33,5 +35,3 @@ function reduxApp(state: State = initialState, action: Action): State {
       return state;
   }
 }
-
-export default reduxApp;

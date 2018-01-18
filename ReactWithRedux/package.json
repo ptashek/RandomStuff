@@ -1,19 +1,22 @@
 {
   "name": "ReactReduxSample",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "React with Redux sample project, bootstraped with create-react-app",
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "flow-bin": "^0.37.4",
-    "react-scripts": "^0.8.4",
-    "react-test-renderer": "^15.4.1"
+    "react-scripts": "^1.0.0",
+    "react-test-renderer": "^16.0.0"
   },
   "dependencies": {
-    "es6-promise": "^4.0.5",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.1",
-    "redux": "^3.6.0",
+    "redux": "^3.7.0",
     "redux-thunk": "^2.1.0"
   },
   "scripts": {

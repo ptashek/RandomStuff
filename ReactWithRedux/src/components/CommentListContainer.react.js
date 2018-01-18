@@ -1,7 +1,8 @@
 // @flow
 
-import React, { PropTypes, Element, PureComponent } from 'react';
-import type { Comment } from '../redux/Store';
+import React, { Element, PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import type { Comment } from '../redux/store';
 
 import CommentContainer from './CommentContainer.react';
 
@@ -29,8 +30,8 @@ class CommentListContainer extends PureComponent {
 }
 
 CommentListContainer.propTypes = {
+  ...PureComponent.propTypes,
   comments: PropTypes.array,
-  ...PureComponent
 }
 
 export default CommentListContainer

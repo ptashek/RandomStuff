@@ -1,7 +1,8 @@
 // @flow
 
-import React, { PropTypes, Element, PureComponent } from 'react';
-import type { Post } from '../redux/Store';
+import React, { Element, PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import type { Post } from '../redux/store';
 
 import PostContainer from './PostContainer.react';
 
@@ -28,10 +29,10 @@ class PostListContainer extends PureComponent {
 }
 
 PostListContainer.propTypes = {
+  ...PureComponent.propTypes,
   posts: PropTypes.array.isRequired,
   activePost: PropTypes.number.isRequired,
   onPostClick: PropTypes.func.isRequired,
-  ...PureComponent
 }
 
 export default PostListContainer
