@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Things demonstrated here:
 
-+ React, with Redux ([React Coomunity](https://github.com/reactjs))
++ React, with Redux ([React Community](https://github.com/reactjs))
 + Async data fetching ([JSONPlaceholder](https://jsonplaceholder.typicode.com/))
 + Testing with [Jest ](https://facebook.github.io/jest/)
 
