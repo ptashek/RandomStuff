@@ -9,12 +9,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "flow-bin": "^0.37.4",
     "react-scripts": "^5.0.1",
-    "react-test-renderer": "^16.0.0"
+    "react-test-renderer": "^16.14.0"
   },
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-redux": "^5.0.1",
     "redux": "^3.7.0",
     "redux-thunk": "^2.1.0"
